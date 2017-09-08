@@ -2,10 +2,20 @@
 import axios from "axios";
 
 var URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
-const APIKey = '010df052716e4cef8459eeb85a014d07';
+var APIKey = '010df052716e4cef8459eeb85a014d07';
 
 
 const API = {
+
+  search: function(query){
+    let URL = "https://api.nytimes.com/svc/search/v2/articlesearch.jsonapi-key="
+    let searchTerm = ""
+    let startDate =  + "0101";
+    let endDate =   + "1231";
+
+    return axios.get(`${URL}&q=${searchTerm}`)
+
+  },
   // Retrieves all quotes from the db
   getArticles: function() {
     return axios.get("/api/saved");
@@ -23,12 +33,3 @@ const API = {
 export default API;
 
 
-axios({
-  method:"GET",
-  url: URL,
-  data: {
-    title: "",
-    date: pub_date,
-    url: web_url,
-
-  }
