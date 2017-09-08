@@ -16,7 +16,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('./public'));
 
-var db = process.env.MONGODB_URI || "mongodb://localhost/nytreact";
+var db = process.env.MONGODB_URI || "mongodb://heroku_3gbscb65:s6ejipe3r6pel2buler2juvehr@ds129394.mlab.com:29394/heroku_3gbscb65";
 
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {
