@@ -7,10 +7,12 @@ const Main = props => (
     <div>
       <Navbar />
       {props.children}
-      <Search />
+      
     </div>
   );
 
+export default Main;
+/*
 var Router = require("react-router")
 
 var Main = React.createClass({
@@ -56,5 +58,5 @@ var Main = React.createClass({
     )
   }
 });
+*/
 
-export default Main;
